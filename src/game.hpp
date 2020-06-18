@@ -2,18 +2,12 @@
 #define TIC_TAC_TOE_GAME_H
 
 #include <vector>
+#include <optional>
+#include "board.hpp"
+#include "coords.hpp"
+#include "enums.hpp"
 
 namespace TicTacToe {
-    const int BOARD_WIDTH = 3;
-    enum Symbol {
-        Cross, Circle
-    };
-    enum State {
-        CrossTurn, CircleTurn, CrossWon, CircleWon, GameDrawn
-    };
-    typename Coordinate int;
-    typename Coords Coordinate[3];
-
     class Game {
     public:
         Symbol currentPlayer();
@@ -23,7 +17,7 @@ namespace TicTacToe {
         State getState();
 
         void turn(Coords coords);
-    }
+    };
 }
 
 #endif //TIC_TAC_TOE_GAME_HPP
