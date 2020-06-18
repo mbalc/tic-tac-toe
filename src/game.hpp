@@ -11,13 +11,6 @@ namespace TicTacToe {
     typename Coordinate int;
     typename Coords Coordinate[3];
 
-    class Board {
-    public:
-        std::optional <Symbol> fieldContent(Coords coords);
-
-        std::vector<Coords[3]> winningSymbolLines();
-    }
-
     class Game {
     public:
         Symbol currentPlayer();
