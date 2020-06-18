@@ -1,3 +1,6 @@
+#ifndef TIC_TAC_TOE_GAME_H
+#define TIC_TAC_TOE_GAME_H
+
 #include <vector>
 
 namespace TicTacToe {
@@ -22,3 +25,5 @@ namespace TicTacToe {
         void turn(Coords coords);
     }
 }
+
+#endif //TIC_TAC_TOE_GAME_HPP
