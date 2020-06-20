@@ -3,13 +3,15 @@
 
 #include "coords.hpp"
 #include "enums.hpp"
+#include <array>
+#include <vector>
 
 namespace TicTacToe {
     class Board {
     public:
         std::optional <Symbol> fieldContent(Coords coords);
 
-        std::vector<Coords[3]> winningSymbolLines();
+        std::vector<std::array<Coords, BOARD_WIDTH>> winningSymbolLines();
     };
 }
 
