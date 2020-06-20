@@ -2,6 +2,7 @@
 #define TIC_TAC_TOE_COORDS_HPP
 
 #include "consts.hpp"
+#include <array>
 
 namespace TicTacToe {
     class Coordinate {
@@ -21,13 +22,16 @@ namespace TicTacToe {
 
         Coordinate *operator-=(int c) { return *this += (-c); }
 
+        bool operator==(int c) const { return value==c; }
+        bool operator==(Coordinate c) const { return value==c.value; }
+
         operator int() {
             value %= BOARD_WIDTH;
             return value;
         }
     };
 
-    using Coords = Coordinate[2];
+    using Coords = std::array <Coordinate, 2>;
 }
 
 #endif //TIC_TAC_TOE_COORDS_HPP

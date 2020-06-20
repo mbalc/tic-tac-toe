@@ -14,15 +14,22 @@ namespace TicTacToe {
                   line[j] = field;
             }
             allLines.push_back(line);
-            }
+        }
         return allLines;
-        }
+    }
+
+    void Board::changeFieldContent(Coords fieldCoords, Symbol symbol) {
+        board[fieldCoords[0]][fieldCoords[1]] = symbol;
+    }
 
 
+    std::vector<BoardLine> Board::testTaMetoda() { // TODO: remove
+        return winningPossibilities();
+    }
 
-        std::optional <Symbol> Board::fieldContent(Coords coords) {
-            return board[coords[0]][coords[1]];
-        }
+    std::optional <Symbol> Board::fieldContent(Coords fieldCords) {
+        return board[fieldCords[0]][fieldCords[1]];
+    }
 
 
 

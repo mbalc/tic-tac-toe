@@ -15,14 +15,13 @@ namespace TicTacToe {
         std::optional <Symbol> board [BOARD_WIDTH][BOARD_WIDTH];
         ;
     public:
-        std::vector<BoardLine> testTaMetoda() { // TODO: remove
-            return winningPossibilities();
-        }
-        std::optional <Symbol> fieldContent(Coords coords);
-
-        std::vector<Coords[3]> winningSymbolLines();
-
         std::vector<BoardLine> winningPossibilities();
+
+        std::vector<BoardLine> testTaMetoda();
+        std::optional <Symbol> fieldContent(Coords fieldCoords);
+        void changeFieldContent(Coords fieldCoords, Symbol symbol);
+//        std::vector<Coords[3]> winningSymbolLines();
+
     };
 }
 
