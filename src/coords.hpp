@@ -27,7 +27,7 @@ namespace TicTacToe {
         }
     };
 
-    using Coords = Coordinate[3];
+    using Coords = Coordinate[2];
 }
 
 #endif //TIC_TAC_TOE_COORDS_HPP
