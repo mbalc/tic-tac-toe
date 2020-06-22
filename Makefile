@@ -1,5 +1,5 @@
 CC=g++
-CPPFLAGS=-std=c++20 -o out
+CPPFLAGS=-std=c++17 -o out
 
 test: tests/test_coords.cpp tests/test.o
 	$(CC) $(CPPFLAGS) tests/test_coords.cpp tests/test.o
