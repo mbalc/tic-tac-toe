@@ -25,16 +25,12 @@ namespace TicTacToe {
         return output;
     }
 
-    std::string repeatStringWithSeparator(int repetitionCount, std::string repeatableString, char separator) {
+    std::string repeatStringWithDelimiter(int repetitionCount, std::string repeatableString, char delimiter) {
         std::vector <std::string> repetitions(repetitionCount, repeatableString);
 
-        // convert from char to string; TODO: change all chars to strings? avoid hack
-        std::string stringSeparator;
-        stringSeparator.push_back(separator);
-
         return std::accumulate(repetitions.begin(), repetitions.end(), std::string(),
-                               [stringSeparator](std::string ss, std::string s) {
-                                   return ss.empty() ? s : ss + stringSeparator + s;
+                               [&delimiter](std::string ss, std::string s) {
+                                   return ss.empty() ? s : ss + delimiter + s;
                                });
     }
 
@@ -77,7 +73,7 @@ namespace TicTacToe {
     /* row types */
 
     std::string renderMarginRow() {
-        return repeatStringWithSeparator(BOARD_WIDTH, renderFieldMargin(), renderGrid());
+        return repeatStringWithDelimiter(BOARD_WIDTH, renderFieldMargin(), renderGrid());
     }
 
     std::string renderGridRow() {
@@ -94,11 +90,11 @@ namespace TicTacToe {
     }
 
     std::string renderMarginRowGroup() {
-        return repeatStringWithSeparator(FIELD_WIDTH, renderMarginRow(), '\n');
+        return repeatStringWithDelimiter(FIELD_WIDTH, renderMarginRow(), '\n');
     }
 
     std::string renderGridRowGroup() {
-        return repeatStringWithSeparator(GRID_WIDTH, renderGridRow(), '\n');
+        return repeatStringWithDelimiter(GRID_WIDTH, renderGridRow(), '\n');
     }
 
     std::string renderFieldSymbolRowGroup(MaybeSymbolRow maybeSymbolRow) {

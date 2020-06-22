@@ -8,6 +8,7 @@
 
 #include <array>
 
+// TODO: not tested yet (need board implementation)
 namespace TicTacToe {
     class BoardRenderer : public Renderer {
     private:
