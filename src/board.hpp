@@ -11,7 +11,7 @@ namespace TicTacToe {
     public:
         std::optional <Symbol> fieldContent(Coords coords);
 
-        std::vector<std::array<Coords, BOARD_WIDTH>> winningSymbolLines();
+        std::vector<BoardLine> winningSymbolLines();
     };
 }
 

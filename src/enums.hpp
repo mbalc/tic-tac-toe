@@ -11,6 +11,8 @@ namespace TicTacToe {
         CrossTurn, CircleTurn, CrossWon, CircleWon, GameDrawn
     };
 
+    // TODO move to a separate `types` file
+    using BoardLine = std::array<Coords, BOARD_WIDTH>;
     using MaybeSymbol = std::optional<Symbol>;
     using MaybeSymbolRow = std::array<MaybeSymbol, BOARD_WIDTH>;
 }
