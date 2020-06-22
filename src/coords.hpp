@@ -2,6 +2,7 @@
 #define TIC_TAC_TOE_COORDS_HPP
 
 #include "consts.hpp"
+#include <array>
 
 namespace TicTacToe {
     class Coordinate {
@@ -27,7 +28,7 @@ namespace TicTacToe {
         }
     };
 
-    using Coords = Coordinate[3];
+    using Coords = std::array<Coordinate, DIMENSION_COUNT>;
 }
 
 #endif //TIC_TAC_TOE_COORDS_HPP
