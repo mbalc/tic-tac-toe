@@ -20,7 +20,7 @@ int main() {
                                    "###########\n"
                                    "   #   #   \n"
                                    "   #   #   \n"
-                                   "   #   #   "));
+                                   "   #   #   \n"));
 
 
     board.changeFieldContent(TicTacToe::Coords({0, 1}), TicTacToe::Cross);
@@ -35,7 +35,7 @@ int main() {
                                    "###########\n"
                                    "   #   #   \n"
                                    "   #   #   \n"
-                                   "   #   #   "));
+                                   "   #   #   \n"));
 
 
     return 0;
