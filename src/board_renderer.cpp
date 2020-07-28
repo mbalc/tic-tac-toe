@@ -90,7 +90,7 @@ namespace TicTacToe {
     }
 
     std::string renderMarginRowGroup() {
-        return repeatStringWithDelimiter(FIELD_WIDTH, renderMarginRow(), '\n');
+        return repeatStringWithDelimiter(FIELD_MARGIN, renderMarginRow(), '\n');
     }
 
     std::string renderGridRowGroup() {
