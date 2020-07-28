@@ -101,7 +101,7 @@ namespace TicTacToe {
         return renderFieldSymbolRow(maybeSymbolRow); // TODO: add support for symbols of width > 1
     }
 
-    BoardRenderer::BoardRenderer(Board board) : board(board) {}
+    BoardRenderer::BoardRenderer(Board &board) : board(board) {}
 
     std::string BoardRenderer::render() {
         std::string output = "";
@@ -113,4 +113,6 @@ namespace TicTacToe {
         }
         return output;
     }
+
+    // BoardRenderer::~Renderer() { };
 }

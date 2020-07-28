@@ -17,7 +17,7 @@ namespace TicTacToe {
         MaybeSymbolRow getBoardRowSymbols(Coordinate rowNumber);
 
     public:
-        BoardRenderer(Board board);
+        BoardRenderer(Board &board);
 
         std::string render() override;
     };
