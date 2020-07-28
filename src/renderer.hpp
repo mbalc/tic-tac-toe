@@ -6,7 +6,7 @@
 namespace TicTacToe {
     class Renderer {
     public:
-        virtual std::string render();
+        virtual std::string render() = 0;
     };
 }
 

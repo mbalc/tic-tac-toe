@@ -12,12 +12,12 @@
 namespace TicTacToe {
     class BoardRenderer : public Renderer {
     private:
-        Board board;
+        Board &board;
 
         MaybeSymbolRow getBoardRowSymbols(Coordinate rowNumber);
 
     public:
-        BoardRenderer(Board board);
+        BoardRenderer(Board &board);
 
         std::string render() override;
     };

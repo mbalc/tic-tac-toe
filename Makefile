@@ -13,8 +13,8 @@ tests/test.o: tests/test.cpp
 src/board.o: src/board.cpp
 	$(CC) $(CPPFLAGS) -c src/board.cpp -o $@
 
-test2: tests/test_board_renderer.cpp tests/test.o dist/artifacts/board_renderer.o
-	$(CC) $(CPPFLAGS) tests/test_board_renderer.cpp tests/test.o dist/artifacts/board_renderer.o
+test3: tests/test_board_renderer.cpp src/board.o tests/test.o dist/artifacts/board_renderer.o
+	$(CC) $(CPPFLAGS) tests/test_board_renderer.cpp src/board.o tests/test.o dist/artifacts/board_renderer.o -o out
 
 # TODO: add board.o dependency
 dist/artifacts/board_renderer.o: src/board_renderer.cpp dist/artifacts
