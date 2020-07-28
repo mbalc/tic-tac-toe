@@ -12,7 +12,7 @@
 namespace TicTacToe {
     class BoardRenderer : public Renderer {
     private:
-        Board board;
+        Board &board;
 
         MaybeSymbolRow getBoardRowSymbols(Coordinate rowNumber);
 
