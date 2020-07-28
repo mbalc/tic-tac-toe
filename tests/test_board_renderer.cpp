@@ -37,6 +37,21 @@ int main() {
                                    "   #   #   \n"
                                    "   #   #   \n"));
 
+    board.changeFieldContent(TicTacToe::Coords({1, 0}), TicTacToe::Circle);
+    board.changeFieldContent(TicTacToe::Coords({2, 2}), TicTacToe::Circle);
+
+    testEq(r.render(), std::string("   #   #   \n"
+                                   "   # X #   \n"
+                                   "   #   #   \n"
+                                   "###########\n"
+                                   "   #   #   \n"
+                                   " O #   #   \n"
+                                   "   #   #   \n"
+                                   "###########\n"
+                                   "   #   #   \n"
+                                   "   #   # O \n"
+                                   "   #   #   \n"));
+
 
     return 0;
 }
