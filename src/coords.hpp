@@ -31,7 +31,7 @@ namespace TicTacToe {
         }
     };
 
-    using Coords = std::array <Coordinate, 2>;
+    using Coords = std::array<Coordinate, DIMENSION_COUNT>;
 }
 
 #endif //TIC_TAC_TOE_COORDS_HPP
