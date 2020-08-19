@@ -1,11 +1,17 @@
 CC=g++
-CPPFLAGS=-std=c++17 -o out
+CPPFLAGS=-std=c++17
 
 test: tests/test_coords.cpp tests/test.o
 	$(CC) $(CPPFLAGS) tests/test_coords.cpp tests/test.o
 
+test2: tests/test_board.cpp tests/test.o src/board.o
+	$(CC) $(CPPFLAGS) tests/test_board.cpp tests/test.o src/board.o -o out
+
 tests/test.o: tests/test.cpp
 	$(CC) $(CPPFLAGS) -c tests/test.cpp -o $@
+
+src/board.o: src/board.cpp
+	$(CC) $(CPPFLAGS) -c src/board.cpp -o $@
 
 test2: tests/test_board_renderer.cpp tests/test.o dist/artifacts/board_renderer.o
 	$(CC) $(CPPFLAGS) tests/test_board_renderer.cpp tests/test.o dist/artifacts/board_renderer.o

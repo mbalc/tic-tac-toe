@@ -22,6 +22,9 @@ namespace TicTacToe {
 
         Coordinate *operator-=(int c) { return *this += (-c); }
 
+        bool operator==(int c) const { return value==c; }
+        bool operator==(Coordinate c) const { return value==c.value; }
+
         operator int() {
             value %= BOARD_WIDTH;
             return value;
